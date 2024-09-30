@@ -1,15 +1,18 @@
 package models;
 
-import java.util.*;
 import javax.persistence.* ;
+import play.db.jpa.* ;
 
 @Entity
-public class Usuario extends Model {
+public class User extends Model {
     private String nome;
     private String email;
     private String telefone;
 
-    public Usuario(String nome, String email, String senha) {
+    public User() {
+    }
+
+    public User(String nome, String email, String telefone) {
         this.nome = nome;
         this.email = email;
         this.telefone = telefone;
